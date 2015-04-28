@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Permissions Modify="true"/>
+<DefaultViewPos>120.187538, 17.087442, 1196741.038267, -21.616184, 0.004602, -58.697083</DefaultViewPos>
+
+<BattleField name="57aaa">
+
+  <Collect id="30001">
+    <Name>Area1</Name>
+    <Icon>..\\Resource\\Image\\menu1.png</Icon>
+    <Model>..\\Resource\\Model\\F15\\f15.3ds</Model>
+    <Neighbors>00000,30002,40001</Neighbors>
+    <Position>121.0,39.0,1000.0</Position>
+    <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+    <DetectionRange>100000.00000</DetectionRange>
+    <LOD>
+      <In>-1.0000000000000</In>
+      <Out>300000.0000000000000</Out>
+    </LOD>
+    <Collect id="20001">
+      <Name>Collect</Name>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Neighbors>00000</Neighbors>
+      <Position>121.0,38.5,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <DetectionRange>120000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+      <Radar id ="10001">
+        <Name>Radar</Name>
+        <Type Type="Radar"/>
+        <Position>120.9, 38.0, 1000.000000</Position>
+        <Angle>122,28.497,1000,</Angle>
+        <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+        <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+        <Icon>..\\Resource\\Image\\model.png</Icon>
+        <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+        <DetectionRange>130000.00000</DetectionRange>
+        <LOD>
+          <In>-1.0000000000000</In>
+          <Out>300000.0000000000000</Out>
+        </LOD>
+      </Radar>
+      <Radar id ="10002">
+        <Name>Radar</Name>
+        <Type Type="Radar"/>
+        <Position>121.0, 38.0, 1000.000000</Position>
+        <Angle>122,28.497,1000,</Angle>
+        <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+        <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+        <Icon>..\\Resource\\Image\\model.png</Icon>
+        <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+        <DetectionRange>250000.00000</DetectionRange>
+        <LOD>
+          <In>-1.0000000000000</In>
+          <Out>300000.0000000000000</Out>
+        </LOD>
+      </Radar>
+    </Collect>
+  </Collect>
+  <Collect id="30002">
+    <Name>Area2</Name>
+    <Icon>..\\Resource\\Image\\model.png</Icon>
+    <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+    <Neighbors>00000,30001</Neighbors>
+    <Position>121.4,39.0,1000.0</Position>
+    <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+    <DetectionRange>150000.00000</DetectionRange>
+    <LOD>
+      <In>-1.0000000000000</In>
+      <Out>300000.0000000000000</Out>
+    </LOD>
+    <Collect id="20002">
+      <Name>Conllect</Name>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Neighbors>00000</Neighbors>
+      <Position>121.25,38.5,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <DetectionRange>160000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+      <Radar id ="10003">
+        <Name>Radar</Name>
+        <Type Type="Radar"/>
+        <Position>121.2, 38.0, 1000.000000</Position>
+        <Angle>122,28.497,1000,</Angle>
+        <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+        <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+        <Icon>..\\Resource\\Image\\model.png</Icon>
+        <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+        <DetectionRange>250000.00000</DetectionRange>
+        <LOD>
+          <In>-1.0000000000000</In>
+          <Out>300000.0000000000000</Out>
+        </LOD>
+      </Radar>
+    </Collect>
+    <Collect id="20003">
+      <Name>Conllect</Name>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Neighbors>00000</Neighbors>
+      <Position>121.45,38.5,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <DetectionRange>170000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+      <Radar id ="10004">
+        <Name>Radar</Name>
+        <Type Type="Radar"/>
+        <Position>121.3, 38.0, 1000.000000</Position>
+        <Angle>122,28.497,1000,</Angle>
+        <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+        <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+        <Icon>..\\Resource\\Image\\model.png</Icon>
+        <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+        <DetectionRange>250000.00000</DetectionRange>
+        <LOD>
+          <In>-1.0000000000000</In>
+          <Out>300000.0000000000000</Out>
+        </LOD>
+      </Radar>
+      <Radar id ="10005">
+        <Name>Radar</Name>
+        <Type Type="Radar"/>
+        <Position>121.4, 38.0, 1000.000000</Position>
+        <Angle>122,28.497,1000,</Angle>
+        <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+        <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+        <Icon>..\\Resource\\Image\\model.png</Icon>
+        <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+        <DetectionRange>250000.00000</DetectionRange>
+        <LOD>
+          <In>-1.0000000000000</In>
+          <Out>300000.0000000000000</Out>
+        </LOD>
+      </Radar>
+      <Radar id ="10006">
+        <Name>Radar</Name>
+        <Type Type="Radar"/>
+        <Position>121.5, 38.0, 1000.000000</Position>
+        <Angle>122,28.497,1000,</Angle>
+        <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+        <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+        <Icon>..\\Resource\\Image\\model.png</Icon>
+        <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+        <DetectionRange>250000.00000</DetectionRange>
+        <LOD>
+          <In>-1.0000000000000</In>
+          <Out>300000.0000000000000</Out>
+        </LOD>
+      </Radar>
+    </Collect>
+  </Collect>
+  <Collect id="40001">
+    <Name>UserGroup</Name>
+    <Icon>..\\Resource\\Image\\model.png</Icon>
+    <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+    <Neighbors>00000,30001</Neighbors>
+    <Position>120.9,39.5,1000.0</Position>
+    <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+    <DetectionRange>250000.00000</DetectionRange>
+    <LOD>
+      <In>-1.0000000000000</In>
+      <Out>300000.0000000000000</Out>
+    </LOD>
+    <User id="50001">
+      <Name>Conllect</Name>
+      <Position>120.8,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+    <User id="50002">
+      <Name>Conllect</Name>
+      <Position>121.0,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+  </Collect>
+  <Collect id="40002">
+    <Name>UserGroup</Name>
+    <Icon>..\\Resource\\Image\\model.png</Icon>
+    <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+    <Neighbors>00000,30001</Neighbors>
+    <Position>121.1,39.5,1000.0</Position>
+    <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+    <DetectionRange>250000.00000</DetectionRange>
+    <LOD>
+      <In>-1.0000000000000</In>
+      <Out>300000.0000000000000</Out>
+    </LOD>
+    <User id="50003">
+      <Name>Conllect</Name>
+      <Position>121.1,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+    <User id="50004">
+      <Name>Conllect</Name>
+      <Position>121.2,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+    <User id="50005">
+      <Name>Conllect</Name>
+      <Position>121.3,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+  </Collect>
+  <Collect id="40003">
+    <Name>UserGroup</Name>
+    <Icon>..\\Resource\\Image\\model.png</Icon>
+    <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+    <Neighbors>00000,30002</Neighbors>
+    <Position>121.4,39.5,1000.0</Position>
+    <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+    <DetectionRange>250000.00000</DetectionRange>
+    <LOD>
+      <In>-1.0000000000000</In>
+      <Out>300000.0000000000000</Out>
+    </LOD>
+    <User id="50006">
+      <Name>Conllect</Name>
+      <Position>121.4,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+    <User id="50007">
+      <Name>Conllect</Name>PM 11:49 27/4/2015
+      <Position>121.5,40.0,1000.0</Position>
+      <ObserverPos>116.557205, 25.020822, 48693.530820, -21.340764, 0.000000, -52.206721</ObserverPos>
+      <Model>..\\Resource\\Model\\63Building\\63building.3ds</Model>
+      <Icon>..\\Resource\\Image\\model.png</Icon>
+      <FileUrl Url="E:/WorkSpace/C++/SceneTest/SceneTest/Resource/MyXML.xml"/>
+      <DetectionRange>250000.00000</DetectionRange>
+      <LOD>
+        <In>-1.0000000000000</In>
+        <Out>300000.0000000000000</Out>
+      </LOD>
+    </User>
+  </Collect>
+
+</BattleField>
+
+<ImagePath>
+  <Menu1>..\\Resource\\Image\\menu1.png</Menu1>
+  <Menu2>..\\Resource\\Image\\menu2.png</Menu2>
+  <Menu3>..\\Resource\\Image\\menu3.png</Menu3>
+</ImagePath>
+<Plane id="80001">
+      <ModelUrl>..\\Resource\\Model\\F15\\f15.3ds</ModelUrl>
+      <PathUrl>..\\Resource\\FlightPath\\PlanePath1.fp</PathUrl>
+</Plane>
+<Ship id="80002">
+      <ModelUrl>..\\Resource\\Model\\F15\\f15.3ds</ModelUrl>
+      <Path>..\\Resource\\FlightPath\\FlightPath1.fp"</Path>
+</Ship>
+<Satellite id="80003">
+      
+ </Satellite>

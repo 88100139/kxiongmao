@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Hello World!</title>
+  <script src="/Kcharf/Cesium/Build/CesiumUnminified/Cesium.js"></script>
+  <style>
+      @import url(/Kcharf/Cesium/Build/CesiumUnminified/Widgets/widgets.css);
+      html, body, #cesiumContainer {
+          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+      }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+
+  <script>
+    var viewer = new Cesium.Viewer('cesiumContainer',{
+		//¶¯»­¿ØÖÆ²»ÏÔÊ¾
+		animation:false,
+		//Ê±¼äÌõ²»ÏÔÊ¾
+		timeline:false,
+		// homeButton:false,
+		// sceneModePicker:false,
+		// navigationHelpButton:false,
+		// geocoder:false,
+		//¼ÓÔØµ¥ÕÅÍ¼Æ¬
+		//imageryProvider:new WMTSImageryProvider({
+		//url:'http://localhost:8989/geoserver/gwc/service/wmts',
+		//layer:'kcharf:world_zh',
+		//format:'image/jpeg',
+		//style:'',
+		//tileMatrixLabels:['EPSG:900913:0','EPSG:900913:1','EPSG:900913:2','EPSG:900913:3','EPSG:900913:4','EPSG:900913:5','EPSG:900913:6',
+		//'EPSG:900913:7','EPSG:900913:8','EPSG:900913:9','EPSG:900913:10','EPSG:900913:11','EPSG:900913:12','EPSG:900913:13','EPSG:900913:14',
+		//'EPSG:900913:15'],
+		//tileMatrixSetID:'EPSG:900913'
+	//}),
+		imageryProvider : new Cesium.SingleTileImageryProvider({
+			url : '/kcharf/Cesium/Apps/Earth.jpg'
+
+		}),
+		//²»ÏÔÊ¾Í¼²ãÑ¡Ôñ
+		baseLayerPicker:false
+
+	});
+	var layers = viewer.scene.imageryLayers;
+	//layers.addImageryProvider(new Cesium.SingleTileImageryProvider({url:'./Earth.jpg'}));
+
+	// TileMapServiceImageryProvider
+	// var tms = new Cesium.TileMapServiceImageryProvider({
+	// 	url : '../Build/CesiumUnminified/Assets/Textures/NaturalEarthII',
+	// 	fileExtension:'jpg',
+	// 	maximunLevel:18
+	// });
+    // layers.addImageryProvider(tms);
+
+    // KNSImageryProvider
+	var kns = new Cesium.KNSImageryProvider({
+		// url : 'kcharf/',
+		url: 'http://192.168.1.254:1234/xns?/Map/',
+		fileExtension:'jpg',
+		maximunLevel:18,
+		minimumLevel:0,
+		tilingScheme:  new Cesium.GeographicTilingScheme({
+                        numberOfLevelZeroTilesX : 20,
+                        numberOfLevelZeroTilesY : 10
+                    })
+	});
+	layers.addImageryProvider(kns);
+
+	// 显示Tile行列号
+    var tilecoorip = new Cesium.TileCoordinatesImageryProvider();
+    // layers.addImageryProvider(tilecoorip);
+
+	// WebMapServiceImageryProvider    
+	var wms = new Cesium.WebMapServiceImageryProvider({
+		url:'http://localhost:8989/geoserver/kcharf/wms?service=WMS',
+		layers:'kcharf:world_zh'
+	});
+	//layers.addImageryProvider(wms);
+
+	// WebMapTileService
+	//var wmts = new Cesium.WebMapTileServiceImageryProvider({
+	//	url:'http://localhost:8989/geoserver/gwc/wmts',
+	//	layer:'kcharf:world_zh',
+	//	format:'image/jpeg',
+	//	tileMatrixSetID:'EPSG:4326'
+	//});
+	// layers.addImageryProvider(wmts);
+
+	// 实时显示经纬度
+	(function showpostion(){
+		  var ellipsoid = viewer.scene.globe.ellipsoid;
+    	var entity = viewer.entities.add({
+        label : {
+            show : false
+        }
+    });
+
+    // Mouse over the globe to see the cartographic position
+    var handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+    handler.setInputAction(function(movement) {
+        var cartesian = viewer.camera.pickEllipsoid(movement.endPosition, ellipsoid);
+        if (cartesian) {
+            var cartographic = ellipsoid.cartesianToCartographic(cartesian);
+            var longitudeString = Cesium.Math.toDegrees(cartographic.longitude).toFixed(2);
+            var latitudeString = Cesium.Math.toDegrees(cartographic.latitude).toFixed(2);
+
+            entity.position = cartesian;
+            entity.label.show = true;
+            entity.label.text = '(' + longitudeString + ', ' + latitudeString + ')';
+        } else {
+            entity.label.show = false;
+        }
+    }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+	})();
+	
+	// viewer.dataSources.add(Cesium.CzmlDataSource.load('line1.czml'));
+	// viewer.dataSources.add(Cesium.KmlDataSource.load('line2.kml'));
+	//加图片
+	 var entitiy1 =    viewer.entities.add({
+	 	id:"billboard_0",
+        position : Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
+        billboard : {
+            image : 'maillogo.jpg',
+            show :true
+            // translucencyByDistance : new Cesium.NearFarScalar(1.5e2, 0.0, 1.5e7, 1.0)
+        }
+ });
+	    // load模型
+    var position = Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883, 0);
+    var heading = Cesium.Math.toRadians(135);
+    var pitch = 0;
+    var roll = 0;
+    var orientation = Cesium.Transforms.headingPitchRollQuaternion(position, heading, pitch, roll);
+        var model = viewer.entities.add({
+        name : "models/CesiumGround/Cesium_Ground.gltf",
+        position : position,
+        orientation : orientation,
+        model : {
+            uri : "models/CesiumGround/Cesium_Ground.gltf",
+               minimumPixelSize : 128,
+               show:false
+        }
+    });
+        var ellipsoid =  viewer.scene.globe.ellipsoid;
+    var handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+     handler.setInputAction(function(wheel) {
+     	model.show = false;
+       	// console.log(viewer.camera.position);
+		var hei = ellipsoid.cartesianToCartographic(viewer.camera.position);
+		// console.log(hei);
+		if(hei.height < 15000000){
+			//隐藏模型
+			model.model.show = true;
+			entitiy1.billboard.show = false;// !entitiy1.billboard.show;
+		}else{
+			entitiy1.billboard.show = true;// !entitiy1.billboard.show;
+			model.model.show = false;
+		}
+
+
+    }, Cesium.ScreenSpaceEventType.WHEEL);
+     viewer.clock.onTick.addEventListener(function(){
+     	var hei = ellipsoid.cartesianToCartographic(viewer.camera.position);
+		// console.log(hei);
+		if(hei.height < 15000000){
+			//隐藏模型
+			model.model.show = true;
+			entitiy1.billboard.show = false;// !entitiy1.billboard.show;
+		}else{
+			entitiy1.billboard.show = true;// !entitiy1.billboard.show;
+			model.model.show = false;
+		}
+     });
+     // handler.setInputAction(function(rightClick){
+     // 	console.log(rightClick);
+     // 	div1.style.left = rightClick.position.x+"px";
+     // 	div1.style.top = rightClick.position.y+"px";
+     // },Cesium.ScreenSpaceEventType.RIGHT_CLICK);
+
+     // load 线
+     var glowingLine = viewer.entities.add({
+    name : 'Glowing blue line on the surface',
+    polyline : {
+    	id: "polyline_0",
+        positions : Cesium.Cartesian3.fromDegreesArray([-75, 37,
+                                                        -125, 37]),
+        width : 10,
+        material : new Cesium.PolylineGlowMaterialProperty({
+            glowPower : 0.2,
+            color : Cesium.Color.BLUE
+        })
+    }
+});
+    
+  </script>
+
+</body>
+</html>
